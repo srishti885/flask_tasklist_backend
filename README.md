@@ -2,21 +2,15 @@
 # flask_tasklist_backend
 =======
 # for psql part
-Server [localhost]:
-Database [postgres]:
-Port [5432]:
+
 Username [postgres]: postgres
 Password for user postgres:
 psql (17.4)
-WARNING: Console code page (437) differs from Windows code page (1252)
-         8-bit characters might not work correctly. See psql reference
-         page "Notes for Windows users" for details.
-Type "help" for help.
 
 postgres=# -- Step 1: Create your database
 postgres=# CREATE DATABASE flask_task_db;
 CREATE DATABASE
-postgres=#
+
 postgres=# -- Step 2: (Optional) Create a new user
 postgres=# CREATE USER flask_user WITH PASSWORD 'yourpassword';
 CREATE ROLE
@@ -77,4 +71,43 @@ flask_task_db=# SELECT * FROM tasks;
   9 | Update resume                | Add latest internship experience      | in_progress | 2025-04-06 16:49:54.466271 | 2025-04-06 16:49:54.466271
  10 | Schedule dentist appointment | Anytime next week                     | pending     | 2025-04-06 16:49:54.466271 | 2025-04-06 16:49:54.466271
 (10 rows)
+<<<<<<< HEAD
 >>>>>>> 54a6fb3 (Initial commit)
+=======
+#  Flask Task Manager API
+
+This is a backend project built using Flask, with a modular structure and PostgreSQL as the database. It allows user registration, login, and complete task management using APIs.
+
+
+##  What This Project Does
+
+User registration and login with JWT token-based authentication.
+Role-Based Access Control (RBAC)for admin and user roles.
+ Users can:
+  - Create a task
+  - View all tasks
+  - View a specific task by ID
+  - Filter tasks by date
+  - Update and delete tasks
+- Secure routes using tokens
+- Rate limiting to avoid abuse
+
+
+
+##  Tech Stack Used
+
+Python 3.10
+Flask
+Flask-SQLAlchemy
+Flask-Marshmallow
+PostgreSQL(with SQLAlchemy ORM)
+Flask-Limiter(for rate limiting)
+JWT (for authentication)
+Docker(for containerization)
+Marshmallow (for schema validation)
+
+
+
+
+
+>>>>>>> 368cfab (Initial commit of working Flask backend)
