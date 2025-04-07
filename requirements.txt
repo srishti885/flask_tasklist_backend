@@ -1,0 +1,9 @@
+Flask
+SQLAlchemy
+Flask-Migrate
+Celery
+marshmallow
+Flask-Limiter
+pytest
+pytest-flask
+pymysql
